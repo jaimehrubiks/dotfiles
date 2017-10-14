@@ -7,10 +7,10 @@
     brew install vim git zsh zsh-completions
 
 ## Linux Install
-    sudo apt-get instal git vim zsh
+    sudo apt-get install git vim zsh
 
 ## Install 
-    git clone --recursive https://github.com/sorin-ionescu/prezto.git "${$HOME}/.zprezto"
+    git clone --recursive https://github.com/sorin-ionescu/prezto.git "${HOME}/.zprezto"
     git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
     sudo curl -fLo /usr/local/bin/yadm https://github.com/TheLocehiliosan/yadm/raw/master/yadm && sudo chmod a+x /usr/local/bin/yadm
     yadm clone https://github.com/jaimehrubiks/dotfiles
