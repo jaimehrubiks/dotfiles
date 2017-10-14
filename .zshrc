@@ -17,3 +17,4 @@ fi
 # Customize to your needs...
 alias lh="ls -lah"
 
+clear
