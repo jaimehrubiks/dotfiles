@@ -67,6 +67,9 @@ set pastetoggle=<F2>
 set showmode
 set clipboard=unnamed
 
+set belloff=all
+
+
 " SEARCHING
 set ignorecase
 set smartcase
