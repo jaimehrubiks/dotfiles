@@ -1,35 +1,48 @@
+set nocompatible 
+filetype off
 
-set nocompatible              " be iMproved, required
-filetype off                  " required
+"" Execute commands with Bash, always.
+" set shell=bash\ -i
+set shell=/bin/bash
 
-set shell=bash\ -i
 
-" set the runtime path to include Vundle and initialize
+"" ;;;;;;;;;;; VUNDLE ;;;;;;;;;;;;;
+
+"" Load Vundle, store bundles in ~/.vundle.local
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'
 
+"" Let vundle manage vundle
+Plugin 'gmarik/Vundle.vim'
+
+"" CrlP
+Plugin 'ctrlpvim/ctrlp.vim'
+
+"" Latex and Markdown
 Plugin 'lervag/vimtex'
 Plugin 'xuhdev/vim-latex-live-preview'
 Plugin 'suan/vim-instant-markdown'
 Plugin 'tpope/vim-markdown'
 
+"" NerdTREE
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
-" Plugin 'justinmk/vim-dirvish'
-" Plugin 'tpope/vim-vinegar'
 
+"" Airline
 Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
+"" Programming
 Plugin 'pangloss/vim-javascript'
 Plugin 'Valloric/YouCompleteMe'
-
 Plugin 'tpope/vim-commentary'
 
-Plugin 'ctrlpvim/ctrlp.vim'
+"" Others
 Plugin 'nvie/vim-togglemouse'
 
+"" Unactive
+" Plugin 'justinmk/vim-dirvish'
+" Plugin 'tpope/vim-vinegar'
 
 
 let g:livepreview_previewer = 'open -a Skim'
@@ -37,9 +50,12 @@ let g:livepreview_previewer = 'open -a Skim'
 autocmd Filetype tex setl updatetime=200
 
 
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
+call vundle#end() 
+"" ;;;;;;;;;;; VUNDLE ;;;;;;;;;;;;;
+
+filetype plugin indent on 
+
+
 
 " GENERAL
 let mapleader=","
@@ -49,6 +65,7 @@ set noswapfile
 nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
 set showmode
+set clipboard=unnamed
 
 " SEARCHING
 set ignorecase
@@ -101,6 +118,8 @@ nnoremap <C-n> :bnext<CR>
 nnoremap <C-p> :bprevious<CR>
 nnoremap <leader>s :w<cr>
 nnoremap ZX :w<cr>
+nnoremap j gj
+nnoremap k gk
 " Disable arrow movement, resize splits instead.
 nnoremap <Up>    :resize +2<CR>
 nnoremap <Down>  :resize -2<CR>
