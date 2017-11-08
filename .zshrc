@@ -16,3 +16,5 @@ fi
 
 # Customize to your needs...
 alias lh="ls -lah"
+mkcd() { mkdir -p "$@" && cd "$@"; }
+
