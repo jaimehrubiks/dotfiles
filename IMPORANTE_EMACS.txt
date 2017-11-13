@@ -1,0 +1,28 @@
+#Genéricas
+instalar:
+git
+npm
+gem
+## Esto arregla el npm -g
+wget -O- https://raw.githubusercontent.com/glenpike/npm-g_nosudo/master/npm-g-nosudo.sh | sh
+
+## Especific
+
+## Para markdown
+sudo npm install -g vmd
+
+## Para css (solo hace falta para scss en realidad)
+gem install specific_install
+gem specific_install https://github.com/brigade/scss-lint.git
+gem specific_install https://github.com/Sweetchuck/scss_lint_reporter_checkstyle.git
+
+## Javascript
+sudo npm install -g tern
+sudo npm install -g js-beautify
+sudo npm install -g eslint
+
+## Para git/github
+git config --global github.oauth-token <token>
+
+# OSX
+brew cask install skim
