@@ -129,6 +129,16 @@ nnoremap <Down>  :resize -2<CR>
 nnoremap <Left>  :vertical resize -2<CR>
 nnoremap <Right> :vertical resize +2<CR>
 
+" nmap <silent> <Leader>k :wincmd k<CR>
+" nmap <silent> <Leader>j :wincmd j<CR>
+" nmap <silent> <Leader>h :wincmd h<CR>
+" nmap <silent> <Leader>l :wincmd l<CR>
+
+nnoremap <silent> <Space>wk :wincmd k<CR>
+nnoremap <silent> <Space>wj :wincmd j<CR>
+nnoremap <silent> <Space>wh :wincmd h<CR>
+nnoremap <silent> <Space>wl :wincmd l<CR>
+
 map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
