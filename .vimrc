@@ -117,15 +117,17 @@ set backspace=indent,eol,start
 " ONLY FOR PRACTICE
 imap jk <Esc>
 imap ZX <Esc>:w<cr>
-nnoremap <C-n> :bnext<CR>
-nnoremap <C-p> :bprevious<CR>
+nnoremap <C-k> :bnext<CR>
+nnoremap <C-j> :bprevious<CR>
+" nnoremap <Up> :bnext<CR>
+" nnoremap <Down> :bprevious<CR>
 nnoremap <leader>s :w<cr>
 nnoremap ZX :w<cr>
 nnoremap j gj
 nnoremap k gk
 " Disable arrow movement, resize splits instead.
-nnoremap <Up>    :resize +2<CR>
-nnoremap <Down>  :resize -2<CR>
+" nnoremap <Up>    :resize +2<CR>
+" nnoremap <Down>  :resize -2<CR>
 nnoremap <Left>  :vertical resize -2<CR>
 nnoremap <Right> :vertical resize +2<CR>
 
