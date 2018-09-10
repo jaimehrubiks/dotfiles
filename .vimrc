@@ -21,7 +21,8 @@ Plugin 'ctrlpvim/ctrlp.vim'
 "" Latex and Markdown
 Plugin 'lervag/vimtex'
 Plugin 'xuhdev/vim-latex-live-preview'
-Plugin 'suan/vim-instant-markdown'
+"Plugin 'suan/vim-instant-markdown'
+Plugin 'iamcco/markdown-preview.vim'
 Plugin 'tpope/vim-markdown'
 
 "" NerdTREE
@@ -39,6 +40,7 @@ Plugin 'tpope/vim-commentary'
 
 "" Others
 Plugin 'nvie/vim-togglemouse'
+Plugin 'easymotion/vim-easymotion'
 
 "" Unactive
 " Plugin 'justinmk/vim-dirvish'
@@ -161,3 +163,6 @@ let g:airline_theme='aurora'
 let g:ctrlp_map = '<c-M>'
 let g:ctrlp_cmd = 'CtrlPBuffer'
 let g:ctrlp_working_path_mode = 'ra'
+
+let g:mkdp_path_to_chrome = "/Applications/Google\\ Chrome.app/Contents/MacOS/Google\\ Chrome"
+
