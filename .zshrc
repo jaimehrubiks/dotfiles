@@ -18,3 +18,6 @@ fi
 alias lh="ls -lah"
 mkcd() { mkdir -p "$@" && cd "$@"; }
 
+autoload -z edit-command-line
+zle -N edit-command-line
+bindkey "^v" edit-command-line
