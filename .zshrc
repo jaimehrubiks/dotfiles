@@ -21,3 +21,4 @@ mkcd() { mkdir -p "$@" && cd "$@"; }
 autoload -z edit-command-line
 zle -N edit-command-line
 bindkey "^v" edit-command-line
+fpath=(/usr/local/share/zsh-completions $fpath)
