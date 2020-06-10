@@ -67,7 +67,8 @@ set noswapfile
 nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
 set showmode
-set clipboard=unnamed
+" Clipboard is now * if we comment below
+" set clipboard=unnamed
 
 set belloff=all
 
