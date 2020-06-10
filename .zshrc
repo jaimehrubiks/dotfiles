@@ -17,6 +17,9 @@ fi
 # Customize to your needs...
 alias lh="ls -lah"
 mkcd() { mkdir -p "$@" && cd "$@"; }
+source <(kubectl completion zsh)
+alias k=kubectl
+complete -F __start_kubectl k
 
 # Edit command line in VIM
 autoload -z edit-command-line
@@ -79,3 +82,13 @@ bindkey -M vicmd '?'     vi-history-search-backward
 # zle -n zle-line-init
 # zle -n zle-keymap-select
 export KEYTIMEOUT=20
+
+tp () {
+    gpg -d -q .sshpassword.gpg > /tmp/fifo; sshpass -f /tmp/fifo ssh $1
+    rm -f /tmp/fifo
+}
+
+kset () {
+ export KUBECONFIG=.kube/$1
+ tmux setenv KUBECONFIG ~/.kube/$1
+}
