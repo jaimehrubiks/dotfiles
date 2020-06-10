@@ -19,11 +19,11 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 
 "" Latex and Markdown
-Plugin 'lervag/vimtex'
-Plugin 'xuhdev/vim-latex-live-preview'
-"Plugin 'suan/vim-instant-markdown'
-Plugin 'iamcco/markdown-preview.vim'
-Plugin 'tpope/vim-markdown'
+" Plugin 'lervag/vimtex'
+" Plugin 'xuhdev/vim-latex-live-preview'
+ "Plugin 'suan/vim-instant-markdown'
+" Plugin 'iamcco/markdown-preview.vim'
+" Plugin 'tpope/vim-markdown'
 
 "" NerdTREE
 Plugin 'scrooloose/nerdtree'
@@ -34,8 +34,8 @@ Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
 "" Programming
-Plugin 'pangloss/vim-javascript'
-Plugin 'Valloric/YouCompleteMe'
+" Plugin 'pangloss/vim-javascript'
+" Plugin 'Valloric/YouCompleteMe'
 Plugin 'tpope/vim-commentary'
 
 "" Others
