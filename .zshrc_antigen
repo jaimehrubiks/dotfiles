@@ -1,52 +1,16 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
 
-# Zplug Init
-export ZPLUG_HOME=~/.zplug
-source ${ZPLUG_HOME}/init.zsh
+# Load Antigen
+source ~/antigen.zsh
 
-# Zplug Configuration
-zplug "zsh-users/zsh-completions"
-zplug "zsh-users/zsh-autosuggestions"
-zplug "zsh-users/zsh-syntax-highlighting", defer:2
-zplug "zsh-users/zsh-history-substring-search", defer:3
-zplug "desyncr/auto-ls"
-zplug "arzzen/calc.plugin.zsh"
-zplug "peterhurford/up.zsh"
-zplug "jimeh/zsh-peco-history"
-zplug "plugins/kubectl", from:oh-my-zsh, defer:2
-zplug "bonnefoa/kubectl-fzf", defer:3
+# # Load Antigen configurations
+antigen init ~/.antigenrc
 
-# Theme
-# zplug "jaimehrubiks/agnoster-zsh-theme", from:oh-my-zsh
-# zplug 'themes/agnoster', from:oh-my-zsh
-zplug romkatv/powerlevel10k, as:theme, depth:1
-
-# Install Plugins if not installed
-if ! zplug check --verbose; then
-    printf "Install? [y/N]: "
-    if read -q; then
-        echo; zplug install
-    fi
-fi
-
-# Zplug Load
-zplug load
-
-# p10K Configuration (Source File)
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-# ZSH Config
-#############################################
+# ZSH Configuration
 HISTFILE=~/.histfile
 HISTSIZE=999999999
 SAVEHIST=$HISTSIZE
 setopt autocd extendedglob nomatch
 unsetopt appendhistory beep notify
-fpath=(~/.oh-my-zsh/completions/ $fpath)
-compinit
 
 # Alias
 alias ll='ls -lah --color'
@@ -65,8 +29,22 @@ kset () {
     kubectl config use-context $1
 }
 
+# Kubernetes
+FILE=/usr/local/bin/kubectl
+if [[ -f "$FILE" ]]; then
+    # source <(kubectl completion zsh)
+    alias k=kubectl
+    # complete -F __start_kubectl k
+    # source $HOME/.antigen/bundles/robbyrussell/oh-my-zsh/plugins/kubectl/kubectl.plugin.zsh
+fi
 
-# VIM
+# VI Mode Jaime
+# Vi line editmode
+# autoload -z edit-command-line
+# zle -N edit-command-line
+# bindkey "^v" edit-command-line
+# fpath=(/usr/local/share/zsh-completions $fpath)
+#
 # Enable
 bindkey -v
 # Global
@@ -94,3 +72,4 @@ bindkey -M vicmd '^w'    backward-kill-word
 bindkey -M vicmd '^u'    backward-kill-line
 bindkey -M vicmd '/'     vi-history-search-forward
 bindkey -M vicmd '?'     vi-history-search-backward
+

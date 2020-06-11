@@ -12,6 +12,7 @@ set shell=/bin/bash
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+
 "" Let vundle manage vundle
 Plugin 'gmarik/Vundle.vim'
 
@@ -24,6 +25,8 @@ Plugin 'ctrlpvim/ctrlp.vim'
  "Plugin 'suan/vim-instant-markdown'
 " Plugin 'iamcco/markdown-preview.vim'
 " Plugin 'tpope/vim-markdown'
+Plugin 'gabrielelana/vim-markdown'
+
 
 "" NerdTREE
 Plugin 'scrooloose/nerdtree'
@@ -42,6 +45,13 @@ Plugin 'tpope/vim-commentary'
 Plugin 'nvie/vim-togglemouse'
 Plugin 'easymotion/vim-easymotion'
 
+" Plugin 'dracula/vim', { 'name': 'dracula' }
+" Plugin 'cormacrelf/vim-colors-github', { 'name': 'vim-colors-github' } 
+Bundle 'altercation/vim-colors-solarized'
+
+
+
+
 "" Unactive
 " Plugin 'justinmk/vim-dirvish'
 " Plugin 'tpope/vim-vinegar'
@@ -54,6 +64,12 @@ autocmd Filetype tex setl updatetime=200
 
 call vundle#end() 
 "" ;;;;;;;;;;; VUNDLE ;;;;;;;;;;;;;
+
+" colorscheme vim-colors-github
+syntax enable
+set background=dark
+colorscheme solarized
+
 
 filetype plugin indent on 
 
@@ -70,7 +86,7 @@ set showmode
 " Clipboard is now * if we comment below
 " set clipboard=unnamed
 
-set belloff=all
+" set belloff=all
 
 
 " SEARCHING
@@ -158,7 +174,7 @@ cmap w!! w !sudo tee % >/dev/null
 map - :NERDTreeToggle<CR>
 
 " airLine config and themes
-let g:airline_theme='aurora'
+let g:airline_theme='violet'
 
 " ctrlP
 let g:ctrlp_map = '<c-M>'

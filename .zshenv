@@ -11,3 +11,4 @@ if [[ ( "$SHLVL" -eq 1 && ! -o LOGIN ) && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; t
 fi
 
 export PATH=$PATH:$HOME/.npm-packages/bin
+export KUBECONFIG=~/.kube/nxt-cluster:~/.kube/dg-cluster

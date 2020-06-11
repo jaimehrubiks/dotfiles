@@ -1,0 +1,25 @@
+# Load the oh-my-zsh's library.
+antigen use oh-my-zsh
+
+# Bundles from the default repo (robbyrussell's oh-my-zsh).
+antigen bundle git
+antigen bundle pip
+antigen bundle docker
+antigen bundle command-not-found
+
+# External Repos
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-users/zsh-completions
+antigen bundle zsh-users/zsh-autosuggestions
+# antigen bundle kubectl
+antigen bundle zsh-users/zsh-history-substring-search
+
+# We also want to enable fpath
+fpath=(~/.oh-my-zsh/completions/ $fpath)
+
+# Load the theme
+antigen theme https://github.com/jaimehrubiks/agnoster-zsh-theme
+# antigen theme robbyrussell
+
+# Tell Antigen that you're done.
+antigen apply
