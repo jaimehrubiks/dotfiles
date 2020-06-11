@@ -199,13 +199,13 @@
 	<key>NSWindow Frame ProfilesPanel</key>
 	<string>665 545 735 382 0 0 1680 1027 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>557 476 620 392 0 0 1680 1027 </string>
+	<string>508 1566 620 392 -142 1050 1920 1080 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>57 0 1623 1027 0 0 1680 1027 </string>
+	<string>64 0 1616 1027 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>1562 1059 2558 1408 1562 1050 2560 1417 </string>
+	<string>64 0 1616 1027 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>1562 1050 2560 1417 1562 1050 2560 1417 </string>
+	<string>64 0 1616 1027 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
 	<string>-774 1932 570 473 -880 1050 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 4</key>
@@ -3066,7 +3066,7 @@
 			<key>Screen</key>
 			<integer>-1</integer>
 			<key>Scrollback Lines</key>
-			<integer>1000</integer>
+			<integer>0</integer>
 			<key>Scrollback With Status Bar</key>
 			<true/>
 			<key>Selected Text Color</key>
@@ -5229,7 +5229,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>DF253708-ABB1-4A70-8DC7-587CAE13DADC</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>127</integer>
+	<integer>182</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -6030,7 +6030,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-03-12T14:31:47Z</date>
+	<date>2020-06-10T14:18:21Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateRelaunchingMarker</key>

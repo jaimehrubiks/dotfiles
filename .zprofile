@@ -45,6 +45,7 @@ typeset -gU cdpath fpath mailpath path
 path=(
   /usr/local/{bin,sbin}
   $path
+  /Users/jaimejoseba/Library/Python/3.7/bin
 )
 
 #
@@ -62,3 +63,5 @@ if (( $#commands[(i)lesspipe(|.sh)] )); then
   export LESSOPEN="| /usr/bin/env $commands[(i)lesspipe(|.sh)] %s 2>&-"
 fi
 
+export DEVOPS=/Users/jaimejoseba/devops
+export ANSIBLE_HOST_KEY_CHECKING=False
