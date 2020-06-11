@@ -12,10 +12,10 @@ zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug "zsh-users/zsh-history-substring-search", defer:3
-zplug "desyncr/auto-ls"
+# zplug "desyncr/auto-ls"
 zplug "arzzen/calc.plugin.zsh"
 zplug "peterhurford/up.zsh"
-zplug "jimeh/zsh-peco-history"
+zplug "jimeh/zsh-peco-history", defer:2
 zplug "plugins/kubectl", from:oh-my-zsh, defer:2
 zplug "bonnefoa/kubectl-fzf", defer:3
 
@@ -38,11 +38,22 @@ zplug load
 # p10K Configuration (Source File)
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# Plugins Configuration
+ZSH_PECO_HISTORY_OPTS="--layout=top-down --initial-filter=Fuzzy"
+ZSH_PECO_HISTORY_DEDUP=notnull
+# AUTO_LS_COMMANDS=(ls)
+# AUTO_LS_PATH=false
+
 # ZSH Config
 #############################################
 HISTFILE=~/.histfile
 HISTSIZE=999999999
 SAVEHIST=$HISTSIZE
+setopt HIST_EXPIRE_DUPS_FIRST
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_FIND_NO_DUPS
+setopt HIST_SAVE_NO_DUPS
 setopt autocd extendedglob nomatch
 unsetopt appendhistory beep notify
 fpath=(~/.oh-my-zsh/completions/ $fpath)
@@ -50,6 +61,9 @@ compinit
 
 # Alias
 alias ll='ls -lah --color'
+alias k=kubectl
+alias kctx=kubectx
+alias kns=kubens
 
 # Functions
 mkcd() { mkdir -p "$@" && cd "$@"; }

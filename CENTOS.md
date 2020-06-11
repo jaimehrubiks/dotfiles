@@ -34,6 +34,14 @@
     sudo install -m 0755 xpanes /usr/local/bin/xpanes
     rm ./xpanes
 
+## Peco
+    VER=0.5.7
+    curl -LO https://github.com/peco/peco/releases/download/v${VER}/peco_linux_386.tar.gz
+    tar -zxvf peco_linux_386.tar.gz
+    chmod +x peco_linux_386/peco
+    sudo mv peco_linux_386/peco /usr/local/bin/
+    rm -f ./peco_linux_386.tar.gz
+
 ## Kubectl
     curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
     chmod +x ./kubectl
